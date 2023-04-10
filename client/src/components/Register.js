@@ -18,8 +18,8 @@ export default function Register() {
   const formik = useFormik({
     initialValues : {
       email: 'doyol56239@cnogs.com',
-      username: 'example123',
-      password : 'admin@123'
+      username: 'example123'
+      // password : 'admin@123'
     },
     validate : registerValidation,
     validateOnBlur: false,
@@ -70,13 +70,15 @@ export default function Register() {
               <div className="textbox flex flex-col items-center gap-6">
                   <input {...formik.getFieldProps('email')} className={styles.textbox} type="text" placeholder='Email*' />
                   <input {...formik.getFieldProps('username')} className={styles.textbox} type="text" placeholder='Username*' />
-                  <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Password*' />
+                  {/* <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Password*' /> */}
                   <button className={styles.btn} type='submit'>Register</button>
                   <button className={styles.btn} type='button' onClick={() => navigate('/questionnaire')}>
                     Go to Questionnaire
                   </button>
+                  <button className={styles.btn} type='button' onClick={() => navigate('/preferences')}>
+                    Select Your Preferences
+                  </button>
               </div>
- 
               <div className="text-center py-4">
                 <span className='text-gray-500'>Already Register? <Link className='text-red-500' to="/">Login Now</Link></span>
               </div>

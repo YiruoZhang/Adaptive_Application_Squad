@@ -11,6 +11,9 @@ import Recovery from './components/Recovery';
 import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Questionnaire from './components/questionnaire';
+import Preference from './components/Preferences';
+import Results from './components/Results';
+
 
 
 /** auth middleware */
@@ -49,6 +52,14 @@ const router = createBrowserRouter([
     {
         path : '/questionnaire',
         element : <Questionnaire></Questionnaire>
+    },
+    {
+        path : '/preferences',
+        element : <Preference></Preference>
+    },
+    {
+        path : '/results',
+        element : <Results></Results>
     },
 ])
 
