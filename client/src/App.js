@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Username from './components/Username';
 import Password from './components/Password';
 import Register from './components/Register';
+import Info from './components/Info';
+import End from './components/End';
 import Profile from './components/Profile';
 import Recovery from './components/Recovery';
 import Reset from './components/Reset';
@@ -24,6 +26,18 @@ const router = createBrowserRouter([
     {
         path : '/',
         element : <Username></Username>
+    },
+    {
+        path : '/info',
+        element : <Info></Info>
+    },
+    {
+        path : '/questionnaire',
+        element : <Questionnaire></Questionnaire>
+    },
+    {
+        path : '/end',
+        element : <End></End>
     },
     {
         path : '/register',
@@ -48,10 +62,6 @@ const router = createBrowserRouter([
     {
         path : '*',
         element : <PageNotFound></PageNotFound>
-    },
-    {
-        path : '/questionnaire',
-        element : <Questionnaire></Questionnaire>
     },
     {
         path : '/preferences',
